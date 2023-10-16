@@ -445,8 +445,6 @@ status: {}
 
    `kubectl create job <job_name> --image=busybox:1.31.0 `
 
-## Namespaces
-
 ## Services
 
 ### Templates
@@ -497,7 +495,6 @@ status:
 
    `kubectl create service nodeport nginx --tcp=80:80 --node-port=30080 --dry-run=client -o yaml`
 
-## Ingress
 
 ## Network Policy
 
@@ -585,8 +582,6 @@ provisioner: moon-retainer
 reclaimPolicy: Retain
 ```
 
-## Environment
-
 ## ConfigMap
 
 ### Imperative commands
@@ -614,15 +609,7 @@ reclaimPolicy: Retain
 
 ## Security Context
 
-## Taints and Tolerations
-
-## Node Selectors
-
-## Node Affinity
-
-## Logging
-
-## Metrics
+### TODO
 
 ## Helm
 
