@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: nginx
+  name: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nginx
+    spec:
+      volumes:
+        - name: web-content
+          emptyDir: {}
+      initContainers: # initContainer start
+        - name: init-con
+          image: busybox:1.31.0
+          command:
+            ["sh", "-c", 'echo "check this out!" > /tmp/web-content/index.html']
+          volumeMounts:
+            - name: web-content
+              mountPath: /tmp/web-content
+      containers:
+      - image: nginx
+        name: nginx
+        volumeMounts:
+            - name: web-content
+              mountPath: /usr/share/nginx/html
+        resources: {}
+status: {}
