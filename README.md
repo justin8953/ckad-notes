@@ -659,3 +659,10 @@ reclaimPolicy: Retain
 8. Show value
 
    `helm show values bitnami/apache`
+
+## Resources
+
+1. [Udemy CKAD course](https://www.udemy.com/course/certified-kubernetes-application-developer/)
+2. [Kubernetes Concepts](https://kubernetes.io/docs/concepts/)
+3. [Kubernetes Tasks](https://kubernetes.io/docs/tasks/)
+4. [Kubernetes Cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
